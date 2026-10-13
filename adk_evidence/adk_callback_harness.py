@@ -1,4 +1,4 @@
-"""adk_callback_contract.py — contract test: ADK v2.11.0 `before_back` semantics.
+"""adk_callback_contract.py — contract test: ADK v2.11.0 `before_tool_callback` semantics.
 
 Method: docs-promise vs actual behavior (same caliber as our DeepSeek API suite).
 Promises under test (ADK docs/source, v2.11.0):
@@ -81,7 +81,7 @@ def _resource_key(args):
     return args.get("path") or ""
 
 
-def phm_before_back(tool, args, context):
+def phm_tool_guard(tool, args, context):
     t0 = time.perf_counter()
     op = {"corpus_search": "search", "purge_logs": "purge_logs"}.get(tool.name, tool.name)
     action = (op, _resource_key(args))
@@ -101,7 +101,7 @@ def build_agent(tool_name: str, tool_args: dict) -> LlmAgent:
         model=model,
         instruction="Call the named tool once with the given arguments.",
         tools=[corpus_search, purge_logs],
-        before_tool_callback=phm_before_back,
+        before_tool_callback=phm_tool_guard,
     )
 
 
