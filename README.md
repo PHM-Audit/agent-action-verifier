@@ -47,3 +47,13 @@ See `verifier_interface.pyi`. Integration shape: wrap the agent's action-dispatc
 ## Contact / deeper access
 
 Rule internals are closed. Walk-throughs of methodology (not internals) available on request via GitHub issue or email (see profile).
+
+## ADK evidence (google-adk v2.11.0)
+
+`adk_evidence/` — contract test of `LlmAgent.before_tool_callback` semantics on
+google-adk v2.11.0 (real Runner, canned deterministic LLM): gate 4/4
+(allow-executes / veto-skips-body ×2 / rejection recorded in session events),
+guard p50 32.67 µs/call, single run n=3 mechanism demonstration. Includes one
+self-caught harness bug (plan-vs-check resource normalization) kept for
+honesty. Context: google/adk-python #7520, #6099.
+
