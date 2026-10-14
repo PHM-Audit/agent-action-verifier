@@ -1,0 +1,61 @@
+{
+ "adk_version": "2.11.0",
+ "python": "3.12.13",
+ "attr_gate_len": 20,
+ "safe_range": [
+  0.0,
+  1300.0
+ ],
+ "n_per_scenario": 10,
+ "scenarios": {
+  "A": {
+   "counts": {
+    "executed": 10,
+    "integrity_error": 0,
+    "gate_veto": 0,
+    "other": 0
+   },
+   "order_example": [
+    "verify@run",
+    "stamp",
+    "probe@tool",
+    "gate:allow"
+   ],
+   "gate_lat_us_p50_median_of_runs": 1.4,
+   "wall_ms_total": 2633.2
+  },
+  "B": {
+   "counts": {
+    "executed": 0,
+    "integrity_error": 10,
+    "gate_veto": 0,
+    "other": 0
+   },
+   "order_example": [
+    "verify@run",
+    "stamp",
+    "probe@tool",
+    "tamper:runtime"
+   ],
+   "gate_lat_us_p50_median_of_runs": 0.0,
+   "wall_ms_total": 306.7
+  },
+  "C": {
+   "counts": {
+    "executed": 0,
+    "integrity_error": 0,
+    "gate_veto": 10,
+    "other": 0
+   },
+   "order_example": [
+    "verify@run",
+    "stamp",
+    "probe@tool",
+    "tamper:restamp",
+    "gate:veto"
+   ],
+   "gate_lat_us_p50_median_of_runs": 1.2,
+   "wall_ms_total": 540.4
+  }
+ }
+}
