@@ -1,0 +1,64 @@
+{
+ "results": {
+  "benign": {
+   "spec_FP": 0,
+   "phm_valid": true,
+   "phm_violations": []
+  },
+  "spec_violation": {
+   "spec_caught": 3,
+   "phm_valid": true
+  },
+  "phys_violation": {
+   "spec_caught": 0,
+   "phm_valid": true,
+   "phm_violations": [],
+   "state": {
+    "d_eff": 1.637,
+    "eta": 0.1275,
+    "phase": "UNCORRECTABLE",
+    "cone_inside_ratio": 1.0,
+    "hidden_risks_count": 0,
+    "critical_removal_fraction": 1.0,
+    "safety_level": "E"
+   }
+  }
+ },
+ "sha": "fa18e1f68d4a9a32ebbc48a5c3e0b037fad391dfbca8f42f452acaef278b3c76",
+ "verdict": "需再设计",
+ "v2_results": {
+  "phys_violation": {
+   "spec_blind_frames": 8,
+   "phm_violations": []
+  },
+  "benign": {
+   "spec_FP": 0,
+   "phm_FP": 0
+  },
+  "benign_variant_FP": 0
+ },
+ "v2_verdict": "需再设计",
+ "v2_sha": "1f69bc6f3ef2cfcf70093445dced741e43c36057f7647b1c91131b2724c276b7",
+ "baseline_state": {
+  "d_eff": 1.6581,
+  "eta": 0.1291,
+  "phase": "UNCORRECTABLE",
+  "cone_inside_ratio": 1.0,
+  "hidden_risks_count": 0,
+  "critical_removal_fraction": 1.0,
+  "safety_level": "E"
+ },
+ "v3_scale": {
+  "threshold": 7.21,
+  "cal_min_benign": 7.359,
+  "cal_max_D1": 7.061,
+  "holdout": {
+   "n": 10,
+   "benign_FP": 0,
+   "D1_detected": 10,
+   "D3_detected": 10
+  },
+  "verdict": "PHM必要=整体管线实锤"
+ },
+ "v3_sha": "35006ee8ed277c443a7e66087658332559d7f7bb2309241ee9163c6a3d88451c"
+}
